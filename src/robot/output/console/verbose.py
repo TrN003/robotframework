@@ -46,6 +46,7 @@ class VerboseOutput:
 
     def start_test(self, test):
         self._writer.info(test.name, test.doc)
+        self._writer._stdout.write('\n')
         self._running_test = True
 
     def end_test(self, test):
